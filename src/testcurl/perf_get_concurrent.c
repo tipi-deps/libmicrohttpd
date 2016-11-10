@@ -398,6 +398,9 @@ main (int argc, char *const *argv)
   errorCount += testMultithreadedGet (port++, 0);
   errorCount += testMultithreadedPoolGet (port++, 0);
   errorCount += testExternalGet (port++);
+  errorCount += testInternalGet (port++, MHD_USE_AUTO);
+  errorCount += testMultithreadedGet (port++, MHD_USE_AUTO);
+  errorCount += testMultithreadedPoolGet (port++, MHD_USE_AUTO);
   if (MHD_YES == MHD_is_feature_supported(MHD_FEATURE_POLL))
     {
       errorCount += testInternalGet (port++, MHD_USE_POLL);
