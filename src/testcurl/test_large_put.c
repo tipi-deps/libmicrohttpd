@@ -49,15 +49,6 @@ static int oneone;
 static int incr_read; /* Use incremental read */
 static int verbose; /* Be verbose */
 
-/**
- * Do not make this much larger since we will hit the
- * MHD default buffer limit and the test code is not
- * written for incremental upload processing...
- * (larger values will likely cause MHD to generate
- * an internal server error -- which would be avoided
- * by writing the putBuffer method in a more general
- * fashion).
- */
 #define PUT_SIZE (256 * 1024)
 
 static char *put_buffer;
