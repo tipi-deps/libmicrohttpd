@@ -149,6 +149,9 @@ ahc_echo (void *cls,
         }
       pproc = (size_t*) *pparam;
 
+      if (0 == *upload_data_size)
+        return MHD_YES; /* No data to process. */
+
       if (*pproc + *upload_data_size > PUT_SIZE)
         {
           fprintf (stderr, "Incoming data larger than expected.\n");
