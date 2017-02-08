@@ -884,16 +884,19 @@ struct MHD_Connection
 
   /**
    * Handler used for processing read connection operations
+   * @sa #MHD_connection_handle_read, #MHD_tls_connection_handle_read
    */
   int (*read_handler) (struct MHD_Connection *connection);
 
   /**
    * Handler used for processing write connection operations
+   * @sa #MHD_connection_handle_write, #MHD_tls_connection_handle_write
    */
   int (*write_handler) (struct MHD_Connection *connection);
 
   /**
    * Handler used for processing idle connection operations
+   * @sa #MHD_connection_handle_idle, #MHD_tls_connection_handle_idle
    */
   int (*idle_handler) (struct MHD_Connection *connection);
 
@@ -1217,7 +1220,19 @@ struct MHD_Daemon
    * Tail of EDLL of connections ready for processing (in epoll mode)
    */
   struct MHD_Connection *eready_tail;
-#endif
+
+#if defined(HTTPS_SUPPORT) && defined(UPGRADE_SUPPORT)
+  /**
+   * Head of EDLL of "upgraded" connections ready for processing (in epoll mode).
+   */
+  struct MHD_Connection *upg_ready_head;
+
+  /**
+   * Tail of EDLL of "upgraded" connections ready for processing (in epoll mode)
+   */
+  struct MHD_Connection *upg_ready_tail;
+#endif /* HTTPS_SUPPORT && UPGRADE_SUPPORT */
+#endif /* EPOLL_SUPPORT */
 
   /**
    * Head of the XDLL of ALL connections with a default ('normal')
