@@ -1,0 +1,4 @@
+{   "x":["src/testzzuf","src/examples","src/testcurl/https", "src/gnutls","src/microhttpd/connection_https.c","src/lib"] 
+    ,"libuv/libuv":{"u":true, "packages":["libuv"],"src/targets":["uv"]}
+    , "platform" :[ "ZLIB::+zlib", "CURL::+libcurl", "OpenSSL::+SSL", "OpenSSL::+Crypto" ]
+}
