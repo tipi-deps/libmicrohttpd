@@ -1,10 +1,31 @@
-{ 
-  "x":["doc","src/testzzuf","src/examples","src/testcurl/https", "src/gnutls","src/microhttpd/connection_https.c","src/lib"]   
-  ,"x:vs-16-2019-win64-cxx17":["doc","src/testzzuf","src/examples","src/testcurl", "src/gnutls","src/microhttpd/connection_https.c","src/lib",
-          "src/microhttpd/test_upgrade_large.c","src/microhttpd/test_postprocessor.c","src/microhttpd_ws/test_websocket_browser.c",
-          "src/microhttpd/test_str.c","src/microhttpd/test_upgrade.c","src/microhttpd/test_postprocessor_large.c","src/microhttpd/test_client_put_stop.c"] 
-  ,"libuv/libuv":{"u":true, "packages":["libuv"],"src/targets":["uv"]}
-  ,  "platform" :[ "ZLIB::+zlib", "CURL::+libcurl", "OpenSSL::+SSL", "OpenSSL::+Crypto" ]
-  , "platform:vs-16-2019-win64-cxx17" :[ "ZLIB::+zlib", "CURL::+libcurl", "OpenSSL::+SSL", "OpenSSL::+Crypto","target::crypt32", "target::ws2_32"]
+{
+  "x": [
+    "doc",
+    "src/testzzuf",
+    "src/examples",
+    "src/testcurl/https",
+    "src/gnutls",
+    "src/microhttpd/connection_https.c",
+    "src/lib"
+  ],
+  "x:vs-16-2019-win64-cxx17": [
+    "doc",
+    "src/testzzuf",
+    "src/examples",
+    "src/testcurl",
+    "src/gnutls",
+    "src/microhttpd/connection_https.c",
+    "src/lib",
+    "src/microhttpd/test_upgrade_large.c",
+    "src/microhttpd/test_postprocessor.c",
+    "src/microhttpd_ws/test_websocket_browser.c",
+    "src/microhttpd/test_str.c",
+    "src/microhttpd/test_upgrade.c",
+    "src/microhttpd/test_postprocessor_large.c",
+    "src/microhttpd/test_client_put_stop.c"
+  ],
+  "libuv/libuv": { "u": true, "packages": [ "libuv" ], "src/targets": [ "uv" ]
+  },
+  "platform": [ "ZLIB::+zlib", "CURL::+libcurl", "OpenSSL::+SSL", "OpenSSL::+Crypto" ],
+  "platform:vs-16-2019-win64-cxx17": [ "ZLIB::+zlib", "CURL::+libcurl", "OpenSSL::+SSL", "OpenSSL::+Crypto", "target::crypt32", "target::ws2_32" ]
 }
-
