@@ -23,9 +23,8 @@
     "src/microhttpd/test_upgrade.c",
     "src/microhttpd/test_postprocessor_large.c",
     "src/microhttpd/test_client_put_stop.c"
-  ],
-  "libuv/libuv": { "u": true, "packages": [ "libuv" ], "src/targets": [ "uv" ]
-  },
+  ]
+  ,
   "platform": [ "ZLIB::+zlib", "CURL::+libcurl", "OpenSSL::+SSL", "OpenSSL::+Crypto" ],
   "platform:vs-16-2019-win64-cxx17": [ "ZLIB::+zlib", "CURL::+libcurl", "OpenSSL::+SSL", "OpenSSL::+Crypto", "target::crypt32", "target::ws2_32" ]
 }
